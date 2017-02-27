@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoMaskingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKu-Ck-3Ie">
+                                <rect key="frame" x="20" y="28" width="374" height="514"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="URz-hb-5aV">
+                                        <rect key="frame" x="8" y="8" width="358" height="498"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.96979965840000004" blue="0.83219608649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="URz-hb-5aV" firstAttribute="top" secondItem="pKu-Ck-3Ie" secondAttribute="topMargin" id="DM4-Hn-fwc"/>
+                                    <constraint firstItem="URz-hb-5aV" firstAttribute="leading" secondItem="pKu-Ck-3Ie" secondAttribute="leadingMargin" id="TS1-yP-Lt4"/>
+                                    <constraint firstItem="URz-hb-5aV" firstAttribute="trailing" secondItem="pKu-Ck-3Ie" secondAttribute="trailingMargin" id="TXq-R7-Wfz"/>
+                                    <constraint firstItem="URz-hb-5aV" firstAttribute="bottom" secondItem="pKu-Ck-3Ie" secondAttribute="bottomMargin" id="Tjc-Z8-gCQ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfq-1r-gE0">
+                                <rect key="frame" x="20" y="671" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DJW-Gt-rUX"/>
+                                    <constraint firstAttribute="width" constant="100" id="pIE-HD-9Dw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Original">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnOriginalOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dmN-SR-kGy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQU-gs-X96">
+                                <rect key="frame" x="294" y="671" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1nn-8X-uz4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Masking">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnMaskingOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ElG-ES-uDi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OQU-gs-X96" firstAttribute="baseline" secondItem="gfq-1r-gE0" secondAttribute="firstBaseline" id="2ve-e2-q7m"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gfq-1r-gE0" secondAttribute="bottom" constant="25" id="3ua-ww-ALz"/>
+                            <constraint firstItem="gfq-1r-gE0" firstAttribute="top" secondItem="OQU-gs-X96" secondAttribute="top" id="7Zr-q5-KHD"/>
+                            <constraint firstItem="pKu-Ck-3Ie" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="C3T-wC-Jxt"/>
+                            <constraint firstItem="gfq-1r-gE0" firstAttribute="top" secondItem="URz-hb-5aV" secondAttribute="bottom" constant="137" id="KDs-Uz-LAr"/>
+                            <constraint firstItem="pKu-Ck-3Ie" firstAttribute="trailing" secondItem="OQU-gs-X96" secondAttribute="trailing" id="LEW-0T-t56"/>
+                            <constraint firstItem="pKu-Ck-3Ie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SgW-tg-nmH"/>
+                            <constraint firstItem="gfq-1r-gE0" firstAttribute="baseline" secondItem="OQU-gs-X96" secondAttribute="firstBaseline" id="bQY-su-0a7"/>
+                            <constraint firstItem="pKu-Ck-3Ie" firstAttribute="leading" secondItem="gfq-1r-gE0" secondAttribute="leading" id="hWE-UV-NUy"/>
+                            <constraint firstItem="OQU-gs-X96" firstAttribute="top" secondItem="URz-hb-5aV" secondAttribute="bottom" constant="137" id="xYh-L6-5Nk"/>
+                            <constraint firstItem="pKu-Ck-3Ie" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="yXg-yc-w1r"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="imgView" destination="URz-hb-5aV" id="VO8-Ht-Ncb"/>
+                        <outlet property="myBgView" destination="pKu-Ck-3Ie" id="Vl0-jT-jhR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="woman" width="423" height="423"/>
+    </resources>
+</document>
