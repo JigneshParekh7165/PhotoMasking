@@ -34,27 +34,5 @@ class ViewController: UIViewController {
     @IBAction func btnOriginalOnClick(sender: AnyObject) {
         imgView.image = UIImage(named: "woman.png")
     }
-    
-    //ImageMasking
-    func maskImage(image:UIImage, mask:(UIImage))->UIImage{
-        
-        let imageReference = image.CGImage
-        let maskReference = mask.CGImage
-        
-        let imageMask = CGImageMaskCreate(CGImageGetWidth(maskReference),
-                                          CGImageGetHeight(maskReference),
-                                          CGImageGetBitsPerComponent(maskReference),
-                                          CGImageGetBitsPerPixel(maskReference),
-                                          CGImageGetBytesPerRow(maskReference),
-                                          CGImageGetDataProvider(maskReference), nil, true)
-        
-        
-        
-        let maskedReference = CGImageCreateWithMask(imageReference, imageMask)
-        
-        let maskedImage = UIImage(CGImage:maskedReference!)
-        
-        return maskedImage
-    }
 }
 
